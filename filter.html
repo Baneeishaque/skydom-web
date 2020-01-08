@@ -1,0 +1,346 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="costom.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.6/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.6/themes/krajee-svg/theme.css" media="all" rel="stylesheet" type="text/css" />
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.6/js/star-rating.min.js" type="text/javascript"></script>
+
+    </head>
+    <body>
+        <!--side bar filter-->
+        <div id="mySidebar" class="sidebar" style="background-color:#4E4EB0;height: 100%;width: 0;position: fixed;z-index: 1;top: 0;left: 0;overflow-x: hidden;transition: 0.5s; padding-top: 60px;">
+           <div class="text-center">
+            <h3 style="color: aliceblue;font-weight: bold;">Filter   <i class="fa fa-filter" style="color:#FFD631 ;padding-left: 20px;"></i></h3>
+           </div>
+           
+          <div class="row text-center">
+               <div class="col-sm-6">
+                   <br>
+                     <h4 style="color: aliceblue;font-weight: bold;">Price</h4>
+               </div>
+               <div class="col-sm-4">
+                   <br>
+                    <h4 style="color: aliceblue;font-weight: bold;">no of Bed</h4>
+               </div>
+               <div class="row" style="margin-left: 70px;">
+                 <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="text" data-toggle="dropdown" style="background-color: #4E4EB0;">3500<span ></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">4000</a></li>
+                      <li><a href="#">5000</a></li>
+                      <li><a href="#">6000</a></li>
+                      <li class="divider"></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="text" data-toggle="dropdown" style="background-color: #4E4EB0; margin-left: 100px;">03<span ></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">02</a></li>
+                      <li><a href="#">01</a></li>
+                      <li><a href="#">04</a></li>
+                      <li class="divider"></li>
+                    </ul>
+                  </div>
+               </div>
+           </div> 
+           <!--Star rating-->
+           <div>
+               <br>
+            <h5 style="color: aliceblue;font-weight: bold;margin-left: 60px;">Ratings</h5>
+        </div>
+        <!--star rating end -->
+        <div style="margin-left: 70px;">
+            <input id="input-id" type="text" class="rating" data-size="md" >
+        </div>
+        <br>
+        <div class="row" style="margin-left: 70px;">
+             <button id="filterbuttons" class="btn btn-primary btn-lg" style="background-color: #4E4EB0;min-width: 100px;" onclick="chgcol()">men</button>
+             <button id="filterbutton1" class="btn btn-primary btn-lg" style="background-color: #4E4EB0;margin-left: 50px;min-width: 100px;" onclick="chgcol1()">women</button>
+        </div>
+        <br>
+        <div class="row" style="margin-left: 70px;">
+            <button id="filterbutton2" class="btn btn-primary btn-lg" style="background-color: #4E4EB0;min-width: 100px;" onclick="chgcol2()">food</button>
+            <button id="filterbutton3" class="btn btn-primary btn-lg" style="background-color: #4E4EB0;margin-left: 50px;min-width: 100px;;" onclick="chgcol3()">wi-fi</button>
+       </div>
+       <br>
+       <div class="row" style="margin-left: 70px;">
+        <button id="filterbutton4" class="btn btn-primary btn-lg" style="background-color: #4E4EB0;min-width: 100px;" onclick="chgcol4()">parcking</button>
+        <button id="filterbutton5" class="btn btn-primary btn-lg" style="background-color: #4E4EB0;margin-left: 50px;min-width: 100px;" onclick="chgcol5()">kitchen</button>
+       </div>
+       <br>
+       <div class="row" style="margin-left: 70px;">
+        <button id="filterbutton6" class="btn btn-primary btn-lg" style="background-color: #4E4EB0;min-width: 100px;" onclick="chgcol6()">Laundry</button>
+        <button id="filterbutton7" class="btn btn-primary btn-lg" style="background-color: #4E4EB0;margin-left: 50px;min-width: 100px;" onclick="chgcol7()">A\C</button>
+       </div>
+       <div>
+           <br>
+        <a href="javascript:void(0)" onclick="closeNav()"><button class="btn btn-primary btn-lg" style="background-color: #4E4EB0;min-width: 100px;margin-left: 150px;">Apply</button></a>
+       </div>
+       <!--side bar end-->
+       <!--navigation bar-->
+        </div>
+        <nav class="navbar navbar-expand-sm" style="background-color: white;">
+            <ul class="navbar-nav" style="align-items: flex-end;">
+                <li class="nav-item">
+                    <li class="nav-item">
+                        <button type="button" class="btn" style="margin-left: 1000px;color:#4E4EB0 ;">Help</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn" style="margin-left: 10px;color:#4E4EB0 ">Login\SignUp</button>
+                    </li>
+                </li>
+            </ul>
+        </nav>
+        <br>
+        <br>
+        <!--session 1 rooms-->
+        <div class="container" id="main">
+            <div class="row">
+                <div class="col-sm-2">
+                   <a><button class="btn btn-primary active" style="background-color:#4E4EB0 ;border-radius: 10px;" onclick="openNav()">Filter    <i class="fa fa-filter" style="color: #FFD631;"></i></button></a>
+                </div>
+                <div class=" col-sm-9">
+                    <form action="/action_page.php">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="Search" name="search">
+                          <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search" style="margin: 3.0px;"></i></button>
+                          </div>
+                        </div>
+                      </form>
+            </div>
+            <div class="container text-center">
+                    <h2 class="font-weight-bold" style="color:#4E4EB0  ;">Suggested Stays around you..</h2>
+                    <br>
+            </div>
+            
+            <div >
+                <div class="row">
+                    <div class="col-span-4" style="margin-left: 20px;">
+                        <div>
+                            <img class="img-fluid" src="modern_bunk_beds_modern_bunk_b.png" style="max-width: 320px;">
+                          </div>
+                          <div class="row">
+                              <div style="margin-left: 20px;">
+                                  <p style="font-weight: bold;">Annie's hotel</p>
+                              </div>
+                              <div style="margin-left: 180px;font-weight: bold;">
+                                  <p>$ 3500</p>
+                              </div>
+
+                          </div>
+                          <div class="row" style="margin-top: -15;">
+                              <div style="margin-left: 20px;">
+                                  <p>2km away</p>
+                              </div>
+                              <div style="color: blue;margin-left: 170px;">
+                                   <span class="fa fa-star checked"></span>
+                                   <span class="fa fa-star checked"></span>
+                                   <span class="fa fa-star checked"></span>
+                                   <span class="fa fa-star"></span>
+                                   <span class="fa fa-star"></span>
+                              </div>
+
+                          </div>
+                    </div>
+                    <div class="col-span-4" style="margin-left: 70px;">
+                        <div>
+                            <img class="img-fluid" src="GM_CAME_01_1_large.png" style="max-width: 320px;">
+                          </div>
+                          <div class="row">
+                              <div style="margin-left: 20px;">
+                                  <p style="font-weight: bold;">Annie's hotel</p>
+                              </div>
+                              <div style="margin-left: 180px;font-weight: bold;">
+                                  <p>$ 3500</p>
+                              </div>
+
+                          </div>
+                          <div class="row" style="margin-top: -15;">
+                              <div style="margin-left: 20px;">
+                                  <p>2km away</p>
+                              </div>
+                              <div style="color: blue;margin-left: 170px;">
+                                   <span class="fa fa-star checked"></span>
+                                   <span class="fa fa-star checked"></span>
+                                   <span class="fa fa-star checked"></span>
+                                   <span class="fa fa-star"></span>
+                                   <span class="fa fa-star"></span>
+                              </div>
+
+                          </div>
+                    </div>
+                    <div class="col-span-4" style="margin-left: 70px;">
+                        <div>
+                            <img class="img-fluid" src="img60561_Reykjavik_City_Hostel.png" style="max-width: 320px;">
+                          </div>
+                          <div class="row">
+                              <div style="margin-left: 20px;">
+                                  <p style="font-weight: bold;">Annie's hotel</p>
+                              </div>
+                              <div style="margin-left: 180px;font-weight: bold;">
+                                  <p>$ 3500</p>
+                              </div>
+
+                          </div>
+                          <div class="row" style="margin-top: -15;">
+                              <div style="margin-left: 20px;">
+                                  <p>2km away</p>
+                              </div>
+                              <div style="color: blue;margin-left: 170px;">
+                                   <span class="fa fa-star checked"></span>
+                                   <span class="fa fa-star checked"></span>
+                                   <span class="fa fa-star checked"></span>
+                                   <span class="fa fa-star"></span>
+                                   <span class="fa fa-star"></span>
+                              </div>
+
+                          </div>
+                    </div>
+                    
+
+                </div>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-span-4" style="margin-left: 20px;">
+                        <div>
+                            <img class="img-fluid" src="South_Shore_Bebble_Modern_Bunk.png" style="max-width: 320px;">
+                          </div>
+                          <div class="row">
+                              <div style="margin-left: 20px;">
+                                  <p style="font-weight: bold;">Annie's hotel</p>
+                              </div>
+                              <div style="margin-left: 180px;font-weight: bold;">
+                                  <p>$ 3500</p>
+                              </div>
+
+                          </div>
+                          <div class="row" style="margin-top: -15;">
+                              <div style="margin-left: 20px;">
+                                  <p>2km away</p>
+                              </div>
+                              <div style="color: blue;margin-left: 170px;">
+                                   <span class="fa fa-star checked"></span>
+                                   <span class="fa fa-star checked"></span>
+                                   <span class="fa fa-star checked"></span>
+                                   <span class="fa fa-star"></span>
+                                   <span class="fa fa-star"></span>
+                              </div>
+
+                          </div>
+                    </div>
+                    <div class="col-span-4" style="margin-left: 70px;">
+                        <div>
+                            <img class="img-fluid" src="download.png" style="max-width: 320px;">
+                          </div>
+                          <div class="row">
+                              <div style="margin-left: 20px;">
+                                  <p style="font-weight: bold;">Annie's hotel</p>
+                              </div>
+                              <div style="margin-left: 180px;font-weight: bold;">
+                                  <p>$ 3500</p>
+                              </div>
+
+                          </div>
+                          <div class="row" style="margin-top: -15;">
+                              <div style="margin-left: 20px;">
+                                  <p>2km away</p>
+                              </div>
+                              <div style="color: blue;margin-left: 170px;">
+                                   <span class="fa fa-star checked"></span>
+                                   <span class="fa fa-star checked"></span>
+                                   <span class="fa fa-star checked"></span>
+                                   <span class="fa fa-star"></span>
+                                   <span class="fa fa-star"></span>
+                              </div>
+
+                          </div>
+                    </div>
+                    <div class="col-span-4" style="margin-left: 70px;">
+                        <div>
+                            <img class="img-fluid" src="modern_bunk_beds_modern_bunk_b.png" style="max-width: 320px;">
+                          </div>
+                          <div class="row">
+                              <div style="margin-left: 20px;">
+                                  <p style="font-weight: bold;">Annie's hotel</p>
+                              </div>
+                              <div style="margin-left: 180px;font-weight: bold;">
+                                  <p>$ 3500</p>
+                              </div>
+
+                          </div>
+                          <div class="row" style="margin-top: -15;">
+                              <div style="margin-left: 20px;">
+                                  <p>2km away</p>
+                              </div>
+                              <div style="color: blue;margin-left: 170px;">
+                                   <span class="fa fa-star checked"></span>
+                                   <span class="fa fa-star checked"></span>
+                                   <span class="fa fa-star checked"></span>
+                                   <span class="fa fa-star"></span>
+                                   <span class="fa fa-star"></span>
+                              </div>
+
+                          </div>
+                          <br>
+                          <br>
+                    </div>
+                    
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <!-- fisrt two fuctions for side bar ,others for changing color of selected buttons-->
+        <script>
+        
+            function openNav() {
+              document.getElementById("mySidebar").style.width = "400px";
+              document.getElementById("main").style.marginLeft = "400px";
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidebar").style.width = "0";
+              document.getElementById("main").style.marginLeft="150px";
+            }
+            function chgcol(){
+                document.getElementById("filterbuttons").style.backgroundColor="#FFD631";
+            }
+            function chgcol1(){
+                document.getElementById("filterbutton1").style.backgroundColor="#FFD631";
+            }
+            function chgcol2(){
+                document.getElementById("filterbutton2").style.backgroundColor="#FFD631";
+            }
+            function chgcol3(){
+                document.getElementById("filterbutton3").style.backgroundColor="#FFD631";
+            }
+            function chgcol4(){
+                document.getElementById("filterbutton4").style.backgroundColor="#FFD631";
+            }
+            function chgcol5(){
+                document.getElementById("filterbutton5").style.backgroundColor="#FFD631";
+            }
+            function chgcol6(){
+                document.getElementById("filterbutton6").style.backgroundColor="#FFD631";
+            }
+            function chgcol7(){
+                document.getElementById("filterbutton7").style.backgroundColor="#FFD631";
+            }
+            </script>
+    </body>
+</html>
